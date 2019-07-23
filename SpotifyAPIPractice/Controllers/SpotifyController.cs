@@ -27,7 +27,17 @@ namespace SpotifyAPIPractice.Controllers
             Token token = await auth.GetToken();
             SpotifyWebAPI api = new SpotifyWebAPI() { TokenType = token.TokenType, AccessToken = token.AccessToken };
 
-            return Ok(api);
+            //return Ok(api);
+
+            FullAlbum album = api.GetAlbum("2KhkdN53S255mwgjrHUhho");
+
+            if (album == null)
+            {
+                //return NotFound($"No Album found with id of {id}");
+                return NotFound($"No Album found");
+            }
+
+            return Ok(album);
         }
 
         //[HttpGet]
