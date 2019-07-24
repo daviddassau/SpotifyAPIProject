@@ -23,14 +23,13 @@ namespace SpotifyAPIPractice.Services
             api = new SpotifyWebAPI() { TokenType = token.TokenType, AccessToken = token.AccessToken };
         }
 
-        //public static Object GetCategories
+        // Probably don't need this...
+        //public static Paging<SimpleTrack> GetAlbumTracks(string albumId = null)
+        //{
+        //    Paging<SimpleTrack> tracks = api.GetAlbumTracks(albumId);
 
-        public static Paging<SimpleTrack> GetAlbumTracks(string albumId = null)
-        {
-            Paging<SimpleTrack> tracks = api.GetAlbumTracks(albumId);
-
-            return tracks;
-        }
+        //    return tracks;
+        //}
 
         public static object GetAlbums(string albumId = null)
         {
@@ -40,13 +39,8 @@ namespace SpotifyAPIPractice.Services
 
         public static object GetArtist(string artistId = null)
         {
-            var artistData = api.GetArtist(artistId); // TODO: Find better variable name than 'tracks'
+            var artistData = api.GetArtist(artistId);
             return artistData;
         }
-
-        //public static CategoryPlaylist GetPlaylist(string categoryId = null, bool isPopular = false, string country = "BR")
-        //{
-
-        //}
     }
 }
