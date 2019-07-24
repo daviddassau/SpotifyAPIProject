@@ -1,4 +1,4 @@
-# SpotifyAPIPractice
+# Spotify API Project
 Easily and regularly get the Spotify URIs (for Track and Album) for the specific subset of content delivered through the second feed. However, THE MOST IMPORTANT THING!!! is getting the 2nd Track and Album URIs.
 
 The Track and Album URIs are only generated once albums have been delivered to Spotify. This means that I’ll either have to strictly target data from the Spotify API, or a combination of our data plus the Spotify API data.
