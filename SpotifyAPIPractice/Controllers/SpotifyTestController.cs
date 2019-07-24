@@ -16,31 +16,24 @@ namespace SpotifyAPIPractice.Controllers
     [ApiController]
     public class SpotifyTestController : ControllerBase
     {
-        //[HttpGet]
-        //public async Task<ActionResult<object>> Get([FromQuery] FilterSpotify filter)
-        //{
-        //    SpotifyClientCredentialsAuthService.StartCredentialsAuth();
-
-        //    if (filter.SpotifyFilter == EnumSpotify.Albums)
-        //    {
-        //        var tracks = SpotifyClientCredentialsAuthService.GetAlbums(filter.Id);
-        //        return Ok(tracks);
-        //    }
-        //    else
-        //    {
-        //        return Ok("Select a filter (Album, Category, or Playlist)");
-        //    }
-        //}
-
-        // Above Endpoint, but simplified
-        [HttpGet]
+        [HttpGet("album")]
         public async Task<ActionResult<object>> GetAlbum([FromQuery] SpotifyAlbum album)
         {
             SpotifyClientCredentialsAuthService.StartCredentialsAuth();
 
-            var tracks = SpotifyClientCredentialsAuthService.GetAlbums(album.Id);
+            var albumData = SpotifyClientCredentialsAuthService.GetAlbums(album.Id);
 
-            return Ok(tracks);
+            return Ok(albumData);
+        }
+
+        [HttpGet("artist")]
+        public async Task<ActionResult<object>> GetArtist([FromQuery] SpotifyArtist artist)
+        {
+            SpotifyClientCredentialsAuthService.StartCredentialsAuth();
+
+            var artistData = SpotifyClientCredentialsAuthService.GetArtist(artist.Id);
+
+            return Ok(artistData);
         }
     }
 }

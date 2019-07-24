@@ -32,10 +32,16 @@ namespace SpotifyAPIPractice.Services
             return tracks;
         }
 
-        public static Object GetAlbums(string albumId = null)
+        public static object GetAlbums(string albumId = null)
         {
-            var tracks = api.GetAlbum(albumId);
-            return tracks;
+            var albumData = api.GetAlbum(albumId);
+            return albumData;
+        }
+
+        public static object GetArtist(string artistId = null)
+        {
+            var artistData = api.GetArtist(artistId); // TODO: Find better variable name than 'tracks'
+            return artistData;
         }
 
         //public static CategoryPlaylist GetPlaylist(string categoryId = null, bool isPopular = false, string country = "BR")
