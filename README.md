@@ -1,6 +1,6 @@
 # SpotifyAPIPractice
 
-### Features
+## Features
 - View all content/rows that meet criteria for SpotifyNewDeal2 feed or Naxos of America, INC Licensor. It would make the most sense for this to be organized VIA a datatable.
   - In the datatable, the two most necessary columns are the Track URI and Album URI.
   - Other columns would/could be Artist Name, Track Name, Label, etc.
@@ -9,3 +9,12 @@
 - Ability to either batch-add tracks to a playlist the user has created, or have the app automatically add tracks to a playlist, based off of certain criteria.
 
 ## Dependencies & NuGet Packages
+### NuGet Packages
+- Microsoft.AspNetCore.App
+- Microsoft.AspNetCore.Razor.Design
+- Microsoft.NETCore.App
+- Microsoft.VisualStudio.Web.CodeGeneration.Design
+- NLog
+- SpotifyAPI.Web
+- SpotifyAPI.Web.Auth
+- System.Configuration.ConfigurationManager
