@@ -7,3 +7,5 @@
 - Each row of content in the datatable would have a "View Details" button, which would direct them to a page with all details/columns for that particular row.
 - The datatable would have certain filtering capabilities, allowing the user to search/filter down the results when they're looking for something specific.
 - Ability to either batch-add tracks to a playlist the user has created, or have the app automatically add tracks to a playlist, based off of certain criteria.
+
+## Dependencies & NuGet Packages
